@@ -1,0 +1,43 @@
+/* App.css - Improved UI for Pokémon Explorer */
+
+/* Google Font */ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+*{
+ margin: 0; padding: 0; 
+ box-sizing: border-box; 
+} 
+
+
+body { font-family: 'Poppins', sans-serif; background: linear-gradient(to right, #f8fafc, #e2e8f0); color: #333; }
+
+.app { padding: 20px; max-width: 1200px; margin: auto; }
+
+.header { text-align: center; margin-bottom: 20px; }
+
+.header h1 { font-size: 3rem; color: #2d3748; }
+
+.controls { display: flex; justify-content: center; align-items: center; gap: 15px; margin-bottom: 30px; flex-wrap: wrap; }
+
+.controls input, .controls select { padding: 12px; width: 250px; font-size: 1rem; border: none; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); outline: none; }
+
+.pokemon-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 25px; }
+
+.card { background: white; border-radius: 15px; padding: 20px; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.1); transition: transform 0.2s, box-shadow 0.2s; }
+
+.card:hover { transform: translateY(-5px); box-shadow: 0 6px 25px rgba(0,0,0,0.15); }
+
+.card img { width: 100px; height: 100px; object-fit: contain; margin-bottom: 10px; }
+
+.card h3 { text-transform: capitalize; color: #1a202c; margin-bottom: 5px; }
+
+.card p { font-size: 0.9rem; color: #718096; }
+
+.types { display: flex; justify-content: center; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
+
+.type { padding: 5px 10px; border-radius: 20px; font-size: 0.8rem; color: white; text-transform: capitalize; font-weight: 500; }
+
+/* Dynamic Type Colors */ .type.fire { background: #FD7D24; } .type.water { background: #4592C4; } .type.grass { background: #9BCC50; } .type.electric { background: #EED535; color: #333; } .type.bug { background: #729F3F; } .type.normal { background: #A4ACAF; } .type.poison { background: #B97FC9; } .type.ground { background: #F7DE3F; color: #333; } .type.fairy { background: #FDB9E9; color: #333; } .type.fighting { background: #D56723; } .type.psychic { background: #F366B9; } .type.rock { background: #A38C21; } .type.ghost { background: #7B62A3; } .type.ice { background: #51C4E7; } .type.dragon { background: #53A4CF; } .type.dark { background: #707070; } .type.steel { background: #9EB7B8; } .type.flying { background: #3DC7EF; }
+
+.loader, .error, .no-results { text-align: center; margin-top: 60px; font-size: 1.5rem; color: #4a5568; }
+
+@media (max-width: 600px) { .controls input, .controls select { width: 90%; } }
